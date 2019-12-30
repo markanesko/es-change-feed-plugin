@@ -1,7 +1,7 @@
 package com.forgerock.elasticsearch.changes;
 
-import org.apache.logging.log4j.Logger;
-import org.elasticsearch.common.logging.Loggers;
+//import org.apache.logging.log4j.Logger;
+//import org.elasticsearch.common.logging.Loggers;
 import org.glassfish.tyrus.server.Server;
 
 import javax.websocket.DeploymentException;

@@ -16,8 +16,8 @@ package com.forgerock.elasticsearch.changes;
     limitations under the License.
 */
 
-import org.apache.logging.log4j.Logger;
-import org.elasticsearch.common.logging.Loggers;
+//import org.apache.logging.log4j.Logger;
+//import org.elasticsearch.common.logging.Loggers;
 
 import javax.websocket.*;
 import javax.websocket.server.ServerEndpoint;

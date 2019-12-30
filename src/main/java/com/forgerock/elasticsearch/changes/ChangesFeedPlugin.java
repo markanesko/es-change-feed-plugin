@@ -22,8 +22,8 @@ import java.util.stream.Collectors;
     limitations under the License.
 */
 
-import org.apache.logging.log4j.Logger;
-import org.elasticsearch.common.logging.Loggers;
+//import org.apache.logging.log4j.Logger;
+//import org.elasticsearch.common.logging.Loggers;
 import org.elasticsearch.common.settings.Setting;
 import org.elasticsearch.common.settings.Settings;
 import org.elasticsearch.index.IndexModule;
