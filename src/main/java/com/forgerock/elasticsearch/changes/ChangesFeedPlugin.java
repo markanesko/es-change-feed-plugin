@@ -37,14 +37,14 @@ public class ChangesFeedPlugin extends Plugin {
     private static final String SETTING_FILTER = "changes.field.includes";
 
 
-    private final Logger log = Loggers.getLogger(ChangesFeedPlugin.class,  "Changes Feed");
+    //private final Logger log = Loggers.getLogger(ChangesFeedPlugin.class,  "Changes Feed");
     private final Set<Source> sources;
     private final boolean enabled;
     private final List<String> filter;
     private final static WebSocketRegister REGISTER = new WebSocketRegister();
 
     public ChangesFeedPlugin(Settings settings) {
-        log.info("Starting Changes Plugin");
+        //log.info("Starting Changes Plugin");
 
         enabled = !settings.getAsBoolean(SETTING_DISABLE, false);
         

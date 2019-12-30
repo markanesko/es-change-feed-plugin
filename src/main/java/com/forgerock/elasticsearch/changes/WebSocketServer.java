@@ -14,18 +14,18 @@ import java.security.PrivilegedAction;
  */
 public class WebSocketServer {
 
-    private final Logger log = Loggers.getLogger(WebSocketServer.class, "WebSocketServer");
+    //private final Logger log = Loggers.getLogger(WebSocketServer.class, "WebSocketServer");
     private final Server server;
 
     public WebSocketServer(int port) {
-        log.info("Starting Changes Plugin");
+        //log.info("Starting Changes Plugin");
 
         server = new Server("localhost", port, "/ws", null, WebSocketEndpoint.class);
     }
 
     public void start() {
         try {
-            log.info("Starting WebSocket server");
+            //log.info("Starting WebSocket server");
             AccessController.doPrivileged(new PrivilegedAction<Void>() {
                 @Override
                 public Void run() {
@@ -41,9 +41,9 @@ public class WebSocketServer {
                     }
                 }
             });
-            log.info("WebSocket server started");
+            //log.info("WebSocket server started");
         } catch (Exception e) {
-            log.error("Failed to start WebSocket server",e);
+            //log.error("Failed to start WebSocket server",e);
             throw new RuntimeException(e);
         }
 

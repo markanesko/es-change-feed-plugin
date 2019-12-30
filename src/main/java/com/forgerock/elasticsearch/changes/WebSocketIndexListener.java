@@ -23,7 +23,7 @@ import org.joda.time.DateTime;
  */
 public class WebSocketIndexListener implements IndexingOperationListener {
 
-    private final Logger log = Loggers.getLogger(WebSocketIndexListener.class, "WebSocketIndexListner");
+    //private final Logger log = Loggers.getLogger(WebSocketIndexListener.class, "WebSocketIndexListner");
 
     private final Set<Source> sources;
     private final List<String> filter;
@@ -129,7 +129,7 @@ public class WebSocketIndexListener implements IndexingOperationListener {
             builder.endObject();
             message = Strings.toString(builder);
         } catch (IOException e) {
-            log.error("Failed to write JSON", e);
+            //log.error("Failed to write JSON", e);
             return;
         }
 
@@ -137,7 +137,7 @@ public class WebSocketIndexListener implements IndexingOperationListener {
             try {
                 listener.sendMessage(message);
             } catch (Exception e) {
-                log.error("Failed to send message", e);
+                //log.error("Failed to send message", e);
             }
 
         }
