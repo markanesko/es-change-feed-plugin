@@ -21,6 +21,7 @@ import org.joda.time.DateTime;
  */
 public class WebSocketIndexListener implements IndexingOperationListener {
 
+    // TODO: add logers
 
     private final Set<Source> sources;
     private final List<String> filter;

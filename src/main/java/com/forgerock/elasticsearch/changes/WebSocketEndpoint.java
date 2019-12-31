@@ -23,6 +23,10 @@ import javax.websocket.server.ServerEndpoint;
 @ServerEndpoint(value = "/_changes")
 public class WebSocketEndpoint {
 
+    
+    // TODO: add logers
+
+
     private Session session;
 
     @OnOpen

@@ -22,8 +22,7 @@ import java.util.stream.Collectors;
     limitations under the License.
 */
 
-//import org.apache.logging.log4j.Logger;
-//import org.elasticsearch.common.logging.Loggers;
+
 import org.elasticsearch.common.settings.Setting;
 import org.elasticsearch.common.settings.Settings;
 import org.elasticsearch.index.IndexModule;
@@ -31,20 +30,21 @@ import org.elasticsearch.plugins.Plugin;
 
 public class ChangesFeedPlugin extends Plugin {
 
+    
+    // TODO: add logers
+
     private static final String SETTING_PORT = "changes.port";
     private static final String SETTING_LISTEN_SOURCE = "changes.listenSource";
     private static final String SETTING_DISABLE = "changes.disable";
     private static final String SETTING_FILTER = "changes.field.includes";
 
 
-    //private final Logger log = Loggers.getLogger(ChangesFeedPlugin.class,  "Changes Feed");
     private final Set<Source> sources;
     private final boolean enabled;
     private final List<String> filter;
     private final static WebSocketRegister REGISTER = new WebSocketRegister();
 
     public ChangesFeedPlugin(Settings settings) {
-        //log.info("Starting Changes Plugin");
 
         enabled = !settings.getAsBoolean(SETTING_DISABLE, false);
         

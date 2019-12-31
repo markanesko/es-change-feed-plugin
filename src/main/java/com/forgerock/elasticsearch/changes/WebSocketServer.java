@@ -12,6 +12,9 @@ import java.security.PrivilegedAction;
  */
 public class WebSocketServer {
 
+    
+    // TODO: add logers
+
     private final Server server;
 
     public WebSocketServer(int port) {
