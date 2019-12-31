@@ -5,10 +5,8 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-//import org.apache.logging.log4j.Logger;
 import org.elasticsearch.common.Strings;
 import org.elasticsearch.common.io.stream.BytesStreamOutput;
-//import org.elasticsearch.common.logging.Loggers;
 import org.elasticsearch.common.xcontent.XContentBuilder;
 import org.elasticsearch.common.xcontent.XContentType;
 import org.elasticsearch.common.xcontent.json.JsonXContent;
@@ -23,7 +21,6 @@ import org.joda.time.DateTime;
  */
 public class WebSocketIndexListener implements IndexingOperationListener {
 
-    //private final Logger log = Loggers.getLogger(WebSocketIndexListener.class, "WebSocketIndexListner");
 
     private final Set<Source> sources;
     private final List<String> filter;
@@ -129,7 +126,6 @@ public class WebSocketIndexListener implements IndexingOperationListener {
             builder.endObject();
             message = Strings.toString(builder);
         } catch (IOException e) {
-            //log.error("Failed to write JSON", e);
             return;
         }
 
@@ -137,7 +133,6 @@ public class WebSocketIndexListener implements IndexingOperationListener {
             try {
                 listener.sendMessage(message);
             } catch (Exception e) {
-                //log.error("Failed to send message", e);
             }
 
         }
